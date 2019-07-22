@@ -1,7 +1,7 @@
 import unittest  
 import pyperclip
-from user import User # Importing the user class
-
+from user import User 
+##Check if users are instatianted correctly
 class TestUser(unittest.TestCase):
 
     def setUp(self):
