@@ -28,7 +28,8 @@ def generate_password(cls):
         Method that generates a random alphanumeric password
         '''
         
-        size = 14
+        size = 9
+        
 
 
         alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase
@@ -42,7 +43,4 @@ def generate_password(cls):
 
         # for credential in cls.credential_list:
         #     if credential.user_password == password:
-        #         user_credential_list.append(credential)
-
-        # return user_credential_list
-    
+        
