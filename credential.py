@@ -29,7 +29,11 @@ def generate_password(cls):
         '''
         
         size = 9
-        
+
+         # user_credential_list = []
+
+        # for credential in cls.credential_list:
+        #     if credential.user_password == password:
 
 
         alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase
@@ -39,8 +43,4 @@ def generate_password(cls):
         
         return password
 
-         # user_credential_list = []
-
-        # for credential in cls.credential_list:
-        #     if credential.user_password == password:
         
