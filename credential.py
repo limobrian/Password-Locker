@@ -37,3 +37,26 @@ def generate_password(cls):
         password = ''.join( choice(alphanum) for num in range(size) )
         
         return password
+##Check credentials exist
+
+# @classmethod
+# def credential_exist(cls, account):
+
+        
+#         for credential in cls.credential_list:
+#             if credential.account == account:
+#                 return True
+            
+#         return False
+##Display credentials
+# @classmethod
+# def display_credential(cls,password):
+
+        # user_credential_list = []
+
+        # for credential in cls.credential_list:
+        #     if credential.user_password == password:
+        #         user_credential_list.append(credential)
+
+        # return user_credential_list
+    

@@ -96,20 +96,4 @@ def test_copy_password(self):
 if __name__ == '__main__':
     unittest.main()
 
-    ##Login test
-# def test_log_in(self):
-#         '''
-#         Test case to test if a user can log into their credentials
-#         '''
-
-#         # Save the new user
-#         self.new_user.save_user()
-
-#         test_user = User("Bajie","sunny")
-
-#         test_user.save_user()
-
-#         found_user = User.log_in("Bajie", "sunny")
-
-#         self.assertEqual( found_user,  User.user_list ) 
-        
+    
