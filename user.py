@@ -23,11 +23,11 @@ class User:
 
         User.user_list.append(self)  
 
-##Deleting users
+
     def delete_user(self):
 
         User.user_list.remove(self)
-
+##Find by number
     @classmethod
     def find_by_name(cls,name):
 
