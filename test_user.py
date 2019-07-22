@@ -1,7 +1,7 @@
 import unittest  
 import pyperclip
 from user import User 
-##Check if users are instatianted correctly
+
 class TestUser(unittest.TestCase):
 
     def setUp(self):
@@ -20,6 +20,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.last_name,"brian")
         self.assertEqual(self.new_user.username,"limobrian")
         self.assertEqual(self.new_user.password,"limooh")
+        ##Test for saving users
 
     def test_save_user(self):
         '''
