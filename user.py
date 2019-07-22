@@ -27,7 +27,7 @@ class User:
     def delete_user(self):
 
         User.user_list.remove(self)
-##Find by number
+
     @classmethod
     def find_by_name(cls,name):
 
