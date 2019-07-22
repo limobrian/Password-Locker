@@ -1,3 +1,4 @@
+import pyperclip
 from user import User
 from credential import Credential
 
@@ -46,19 +47,19 @@ def user_log_in(name, password):
 
 
 def main():
-    print("Hello Welcome to your  password locker. What is your name?")
+    print("Welcome to your  password locker. What is your name?")
     user_name = input()
 
-    print(f"Hello {user_name}. what would you like to do?")
+    print(f"Hi {user_name}. what would you like to do?")
     print('\n')
 
     while True:
                     print(
-                        "Use these short codes : cu - create a new user, du - display users, fu -find a user,lu - log users ,ex -exit the users list ")
+                        "Use these cheat codes to navigate through : yo - create a new user, lo - display users, wo -find a user,lol - log users ,ex -exit the users list ")
 
-                    short_code = input().lower()
+                    cheat_code = input().lower()
 
-                    if short_code == 'cu':
+                    if cheat_code == 'yo':
                             print("New Credentials")
                             print("-"*10)
 
@@ -81,7 +82,7 @@ def main():
                             print(f"New User {f_name} {l_name} created")
                             print('\n')
 
-                    elif short_code == 'du':
+                    elif cheat_code == 'lo':
 
                             if display_users():
                                     print("Here is a list of all your users")
@@ -90,8 +91,8 @@ def main():
                                                 f"{user.first_name} {user.last_name} .....{user.username}")
                             else:
                                     print("You dont seem to have any users saved yet")
-                                    ####
-                    elif short_code == 'lu':
+                                    
+                    elif cheat_code == 'lol':
                                     print("Log into Password Locker Account")
                                     print("Enter the user name")
                                     username = input()
@@ -100,11 +101,11 @@ def main():
                                     else:
                                         user_log_in(username,u_name)
                                         print(f'''{username} welcome to your Credentials\n
-                                        Use these short codes to get around''')
+                                        Use these cheat codes to get around''')
                                         print("Enter the password")
                                         u_name = input()
 
-                    elif short_code == 'fu':
+                    elif cheat_code == 'wo':
 
                             print("Enter the username you want to search for")
 
@@ -122,12 +123,12 @@ def main():
                             else:
                                     print("That user does not exist")
 
-                    elif short_code == "ex":
-                            print("Bye .......")
+                    elif cheat_code == "ex":
+                            print("It was nice for  you having to use my program feel free to use it again  ")
                             break
                     else:
                             print(
-                                "I really didn't get that. Please use the short codes")
+                                "I really didn't get that. Please use the cheat codes")
 
 if __name__ == '__main__':
 
