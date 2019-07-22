@@ -49,13 +49,13 @@ class User:
     def display_users(cls):
 
         return cls.user_list
-##Copy & Paste mechanism
+
     @classmethod
     def copy_password(cls,name):
         user_found = User.find_by_name(name)
         pyperclip.copy(user_found.password)
         
-
+##Display password
     @classmethod
     def display_user(cls,password):
 
