@@ -44,12 +44,12 @@ class User:
                     return True
 
         return False
-    ##Display users
+    
     @classmethod
     def display_users(cls):
 
         return cls.user_list
-
+##Copy & Paste mechanism
     @classmethod
     def copy_password(cls,name):
         user_found = User.find_by_name(name)
