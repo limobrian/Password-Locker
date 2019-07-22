@@ -2,7 +2,7 @@ import pyperclip
 from credential import Credential
 class User:
 
-    user_list = []
+    user_list = []  crea empty user list
 
     def __init__(self,first_name,last_name,name,password):
  
