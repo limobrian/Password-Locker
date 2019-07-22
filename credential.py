@@ -1,29 +1,38 @@
+from random import choice
+import string
 class Credential:
 
-    """
-    create new instances
-    """
+    credential_list = []  
 
-    credentials = []
 
-    def __init__(self, platform, username, password):
+def __init__(self, account, password, account_password):
 
-        self.platform = platform
-        self.username = username
-        self.password = password
 
-    def save_credential(self):
 
-        """
-        save credential objects to the credential list
-        """
-        Credential.credentials.append(self)
+        self.account = account
+        self.password = account_password
+        self.account_password = account_password
+        
+def save_credential(self):
 
-    @classmethod
+        '''
+        save_credential method saves credentials objects into credential_list
+        '''
 
-    def display_credentials(cls):
+        Credential.credential_list.append(self) 
+        
+@classmethod
+def generate_password(cls):
+        '''
+        Method that generates a random alphanumeric password
+        '''
+        
+        size = 14
 
-        """
-        displays the credentials 
-        """
-        return cls.credentials
+
+        alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase
+
+
+        password = ''.join( choice(alphanum) for num in range(size) )
+        
+        return password

@@ -1,38 +1,76 @@
-
+import pyperclip 
+from credential import Credential
 class User:
 
-    '''
-    class to create new user accounts 
-    '''
+    user_list = []
 
-    create_account = []
+    def __init__(self,first_name,last_name,name,password):
+ 
 
-    def __init__(self, firstName, lastName, email, username, password):
 
-        """
-        Initializes the class
-        """
-
-        self.firstName = firstName
-        self.lastName = lastName
-        self.email = email
-        self.username = username
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = name
         self.password = password
 
-    def save_account(self):
+    def save_user(self):
 
-        """
-        saves the new user to create_account list
-        """
+        '''
+        save_contact method saves contact objects into contact_list
+        '''
 
-        User.create_account.append(self)
+        User.user_list.append(self)  
+
+    def delete_user(self):
+
+        User.user_list.remove(self)
 
     @classmethod
-    def user_login(cls, used_name, used_password):
-        """
-        checks whether user exists
-        """
-        for user in User.create_account:
-            if user.username == used_name and user.password == used_password:
+    def find_by_name(cls,name):
+
+
+        for user in cls.user_list:
+            if user.username == name:
                 return user
-            return False
+            
+    @classmethod
+    def user_exist(cls,name):
+
+        for user in cls.user_list:
+            if user.username == name:
+                    return True
+
+        return False
+    
+    @classmethod
+    def display_users(cls):
+
+        return cls.user_list
+
+    @classmethod
+    def copy_password(cls,name):
+        user_found = User.find_by_name(name)
+        pyperclip.copy(user_found.password)
+        
+
+    @classmethod
+    def display_user(cls,password):
+
+        user_user_list = []
+
+        for user in cls.user_list:
+            if user.user_password == password:
+                user_user_list.append(password)
+
+        return user_user_list
+
+    @classmethod
+    def log_in(cls, name, password):
+
+    
+        for user in cls.user_list:
+            if user.username == name and user.password == password:
+                return Credential.credential_list
+
+        return False
+
