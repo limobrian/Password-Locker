@@ -1,4 +1,4 @@
-# Pasaword Locker
+# Password Locker
 
 ## By **limooh brian**
 
