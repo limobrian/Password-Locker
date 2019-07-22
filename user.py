@@ -13,7 +13,7 @@ class User:
         self.username = name
         self.password = password
 
-        ##Saving users
+        
 
     def save_user(self):
 
@@ -23,6 +23,7 @@ class User:
 
         User.user_list.append(self)  
 
+##Deleting users
     def delete_user(self):
 
         User.user_list.remove(self)
